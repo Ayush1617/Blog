@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container">
+
+    <h1>{{article.title}}</h1>
+    <h5>published On {{ article.pub_date }}</h5>
+    <img style= "width:500px "src="{{article.img.url}}" alt="">
+    <p style="width:80%">{{article.content}}</p>
+
+
+
+
+</div>
+
+
+{% endblock content %}
