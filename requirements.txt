@@ -3,3 +3,8 @@ Django==5.0.1
 pillow==10.2.0
 sqlparse==0.4.4
 tzdata==2023.4
+
+
+# to install  all these use cammand while cloning__---pip install -r requirement.txt
+
+# to know all packages and there versions we use ----pip freeze > requirement.txt

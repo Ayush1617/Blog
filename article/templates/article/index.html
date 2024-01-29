@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 
 
+
 {% block content %}
 
 <div class="container row">
    <h1>ALL ARTICLE</h1>
    <div class="row">  
   {% for article in articles %}
-   <div class="card col-" style="width: 18rem;">
+   <div class="card col-" style="width: 20rem;" >
       <img src="{{article.img.url}}" class="card-img-top" alt="...">
       <div class="card-body">
       <h5 class="card-title">{{article.title}}</h5>

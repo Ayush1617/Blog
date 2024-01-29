@@ -23,7 +23,26 @@ def single_article(request,pk):
     article = Article.objects.get(pk=pk)
     context={
 
-'article':article
+        'article':article
      }
 
     return render(request,'article/article.html',context)
+
+def categoriesed_article(request,pk):
+    if pk ==0 :
+        articles = Article.objects.all()# here we are applying if else to perform a function for 'all' text present in navbaar
+        context={
+        'articles':articles,
+        'category':'all',
+    }
+
+    else:
+        category = Category.objects.get(pk=pk)
+        article = Article.objects.filter(category=category).all()
+        context={
+            'articles':article,
+            'category':category,
+        }
+
+    
+    return render(request, 'article/categoriesed_article.html',context)
