@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" >
+
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        
+        <div  width:60% class="form-table ">
+        <div class="form-lable nt-2 fw-bold">
+            {{field.lable}}
+        </div>
+
+        <div class="form-control">
+            {{field}}
+        </div>
+
+
+        </div>
+        {% for field in form %}
+        {% endfor %}
+        {{form}}
+        
+
+        <button type="submit" class="btn btn-success">submit</button>
+    </form>
+</div>
+
+
+
+{% endblock content %}

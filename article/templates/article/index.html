@@ -6,15 +6,17 @@
 
 <div class="container row">
    <h1>ALL ARTICLE</h1>
-   <div class="row">  
+   <div class="row" style ="margin: 5px;">  
   {% for article in articles %}
    <div class="card col-" style="width: 20rem;" >
-      <img src="{{article.img.url}}" class="card-img-top" alt="...">
+      <img src="{{article.img.url}}" class="card-img-top" alt="..."height="200px" width="300px" >
       <div class="card-body">
       <h5 class="card-title">{{article.title}}</h5>
       <p class="card-text">{{article.content  | truncatewords:30}}</p>
       <a href="{% url "article:single_article" article.id %}" class="btn btn-primary">know more</a>
       </div>
+     
+        
    </div>
 
  

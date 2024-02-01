@@ -4,7 +4,7 @@
     <h4 class ='my-4'>Category:{{category}}</h4>
     <div class="">
         {% for article in articles %}
-        <a class="row  text-decoration none text-dark" href="{% url "article:single_article" article.id %}">
+        <a class="row  text-decoration none text-dark my-5" href="{% url "article:single_article" article.id %}">
 
             <div class="image col-4">
                 <img style ="width: 90%;"src="{{article.img.url}}" alt="">
